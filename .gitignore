@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+*.log
+
+#忽略uniapp
+/.hbuilderx
+/manifest.json
+/pages.json
+/uni.scss
+/main.js
+/pages
