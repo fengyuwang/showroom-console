@@ -9,6 +9,7 @@
   },
   "scripts": {
     "setup": "script/setup.sh",
+    "cleanup": "script/cleanup.sh",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

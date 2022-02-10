@@ -30,6 +30,7 @@ module.exports = defineConfig({
   },
   plugins: ['vue', '@typescript-eslint', 'import', 'node', 'promise'],
   rules: {
-    'vue/require-default-prop': 0
+    'vue/require-default-prop': 0,
+    'vue/multi-word-component-names': 0
   }
 })

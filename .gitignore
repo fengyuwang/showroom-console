@@ -5,7 +5,8 @@ dist-ssr
 *.local
 *.log
 
-#忽略uniapp
+# 忽略uniapp相关文件
+unpackage
 /.hbuilderx
 /manifest.json
 /pages.json
