@@ -3,4 +3,7 @@ import App from './App.vue'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 
-createApp(App).mount('#app')
+import router from '@/plugins/router'
+const app = createApp(App)
+app.use(router)
+app.mount('#app')

@@ -242,6 +242,11 @@
     "@vue/compiler-dom" "3.2.29"
     "@vue/shared" "3.2.29"
 
+"@vue/devtools-api@^6.0.0-beta.18":
+  version "6.0.2"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.0.2.tgz#92267911dd2772c5a7641d2889051c6193a7c6aa"
+  integrity sha512-1W8ylfudTFepNgpgY1Dp29iVPlseIy+0+4xXoMkxKmdnxWx8vm8dNgz4F83zML46hHb9aP382JURFfqLuJcWYQ==
+
 "@vue/reactivity-transform@3.2.29":
   version "3.2.29"
   resolved "https://registry.npmjs.org/@vue/reactivity-transform/-/reactivity-transform-3.2.29.tgz"
@@ -2573,6 +2578,13 @@ vue-eslint-parser@^8.0.1:
     esquery "^1.4.0"
     lodash "^4.17.21"
     semver "^7.3.5"
+
+vue-router@^4.0.12:
+  version "4.0.12"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
+  integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.18"
 
 vue@^3.2.29:
   version "3.2.29"
