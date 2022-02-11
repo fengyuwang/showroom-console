@@ -1,10 +1,32 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
+import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), WindiCSS()],
+  plugins: [
+    Vue(),
+    Pages(),
+    Layouts(),
+    Components({
+      dts: 'src/components.d.ts'
+    }),
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        'vue-i18n',
+        '@vueuse/head',
+        '@vueuse/core'
+      ],
+      dts: 'src/auto-imports.d.ts'
+    }),
+    WindiCSS()
+  ],
   resolve: {
     alias: {
       '@': '/src'
