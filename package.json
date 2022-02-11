@@ -16,6 +16,8 @@
     "lint": "script/lint.sh"
   },
   "dependencies": {
+    "@vueuse/core": "^7.6.1",
+    "@vueuse/head": "^0.7.5",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
