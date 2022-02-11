@@ -16,5 +16,8 @@
     "pages.json": true,
     "unpackage": true,
     "uni.scss": true
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "locales"
+  ]
 }
