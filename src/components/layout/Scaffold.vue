@@ -1,11 +1,9 @@
 <template>
-  <div class="absolute inset-0">
+  <div class="absolute flex flex-col inset-0">
     <Header />
-    <div class="absolute inset-x-0 bottom-0 overflow-hidden">
+    <div class="relative flex flex-grow">
       <Aside />
-      <div class="absolute inset-0 left-21">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
   </div>
 </template>

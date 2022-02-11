@@ -1,5 +1,5 @@
 <template>
-  <nav class="absolute inset-y-0 left-0 w-21 border-r z-40">
+  <nav class="flex w-21 border-r z-40 bg-gray-300">
     <div class="flex flex-col w-full h-full justify-between"></div>
   </nav>
 </template>
