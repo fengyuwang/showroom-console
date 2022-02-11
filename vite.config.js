@@ -13,7 +13,7 @@ export default defineConfig({
     Pages(),
     Layouts(),
     Components({
-      dts: 'src/components.d.ts'
+      dts: 'tmp/components.d.ts'
     }),
     AutoImport({
       imports: [
@@ -23,7 +23,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core'
       ],
-      dts: 'src/auto-imports.d.ts'
+      dts: 'tmp/auto-imports.d.ts'
     }),
     WindiCSS()
   ],
