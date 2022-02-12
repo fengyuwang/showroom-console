@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
+// import Vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -10,7 +10,7 @@ import uni from '@dcloudio/vite-plugin-uni'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    Vue(),
+    // Vue(),
     Pages(),
     Layouts(),
     Components({
