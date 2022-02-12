@@ -5,15 +5,5 @@ dist-ssr
 *.local
 *.log
 
-# 忽略uniapp相关文件
-unpackage
-/.hbuilderx
-/manifest.json
-/pages.json
-/uni.scss
-/main.js
-/pages
-/App.vue
-
 # 忽略tmp（vite插件生成的文件指定存储在这里）
 /tmp

@@ -1,6 +1,6 @@
 {
-    "name" : "uni-hello",
-    "appid" : "__UNI__F654A8E",
+    "name" : "vite-vue3-uniapp",
+    "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -42,7 +42,7 @@
     },
     "quickapp" : {},
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx80e8d0b6c07053de",
         "setting" : {
             "urlCheck" : false
         },

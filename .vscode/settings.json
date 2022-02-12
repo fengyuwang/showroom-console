@@ -5,18 +5,7 @@
     "postcss",
     "vue"
   ],
-  "files.exclude": {
-    ".hbuilderx": true,
-    ".vscode": true,
-    "App.vue": true,
-    "main.js": true,
-    "manifest.json": true,
-    "node_modules": true,
-    "pages": true,
-    "pages.json": true,
-    "unpackage": true,
-    "uni.scss": true
-  },
+  "files.exclude": {},
   "i18n-ally.localesPaths": [
     "locales"
   ]
