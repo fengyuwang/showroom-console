@@ -7,3 +7,6 @@ dist-ssr
 
 # 忽略tmp（vite插件生成的文件指定存储在这里）
 /tmp
+
+# 忽略hbuilderx
+/.hbuilderx
