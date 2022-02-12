@@ -7,11 +7,11 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const app = createApp(App)
-const routes = setupLayouts(generatedRoutes)
-app.use(
-  createRouter({
-    history: createWebHashHistory(),
-    routes // `routes: routes` 的缩写
-  })
-)
+// const routes = setupLayouts(generatedRoutes)
+// app.use(
+//   createRouter({
+//     history: createWebHashHistory(),
+//     routes // `routes: routes` 的缩写
+//   })
+// )
 app.mount('#app')
