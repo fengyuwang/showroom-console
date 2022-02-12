@@ -5,6 +5,7 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import uni from '@dcloudio/vite-plugin-uni'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,7 +26,8 @@ export default defineConfig({
       ],
       dts: 'tmp/auto-imports.d.ts'
     }),
-    WindiCSS()
+    WindiCSS(),
+    uni.default()
   ],
   resolve: {
     alias: {
