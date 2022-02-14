@@ -1,34 +1,19 @@
 {
 	"pages": [
 		{
-			"path": "pages/app/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
+			"path": "pages/app/index"
 		},
 		{
-			"path": "pages/chat/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
+			"path": "pages/chat/index"
 		},
 		{
-			"path": "pages/contact/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
+			"path": "pages/contact/index"
 		},
 		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
+			"path": "pages/index/index"
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationStyle": "custom"
 	}
 }
