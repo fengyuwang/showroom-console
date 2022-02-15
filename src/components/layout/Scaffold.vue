@@ -1,8 +1,8 @@
 <template>
-  <div class="absolute flex flex-col inset-0">
-    <Header />
-    <div class="relative flex flex-grow">
-      <Aside />
+  <div class="absolute flex inset-0 bg-black">
+    <Aside />
+    <div class="relative flex flex-col flex-grow">
+      <Header />
       <slot></slot>
     </div>
   </div>

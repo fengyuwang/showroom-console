@@ -1,9 +1,5 @@
-<template>
-  <div>
-    <h1>Contact</h1>
-  </div>
-</template>
+<script setup></script>
 
-<script>
-console.log(1111)
-</script>
+<template>
+  <h1>Chat</h1>
+</template>

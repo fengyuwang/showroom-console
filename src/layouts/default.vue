@@ -3,7 +3,7 @@
     <main
       class="relative flex-grow bg-gray-4 overflow-y-auto overflow-x-hidden"
     >
-      <router-view />
+      <slot />
     </main>
   </Scaffold>
 </template>

@@ -1,9 +1,16 @@
 <template>
-  <div class="bg-red-50 h-10"></div>
+  <RoomOneLayout>
+    <ControlStyleOneVue />
+  </RoomOneLayout>
 </template>
 
 <script>
-export default {}
+import ControlStyleOneVue from '@/components/compound/ControlStyleOne.vue'
+import RoomOneLayout from '@/layouts/roomOne.vue'
+export default {
+  components: {
+    ControlStyleOneVue,
+    RoomOneLayout
+  }
+}
 </script>
-
-<style></style>

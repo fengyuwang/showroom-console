@@ -1,13 +1,21 @@
 <template>
-  <header class="flex items-center">
-    <router-link class="ml-4 w-24" to="/">
-      <svg class="text-white fill-current">
-        <use xlink:href="#icon-logo"></use>
-      </svg>
-    </router-link>
+  <header class="flex flex-row-reverse items-center">
+    <view class="flex flex-col items-end w-full">
+      <view class="status-bar"></view>
+      <image
+        src="@/assets/images/scaffold/status.png"
+        class="w-285px h-33px mx-8 mt-4"
+      />
+      <image
+        src="@/assets/images/scaffold/status_line.png"
+        class="w-full h-6px mt-2"
+      />
+    </view>
   </header>
 </template>
 
-<script>
-export default {}
-</script>
+<style scoped>
+.status-bar {
+  height: var(--status-bar-height);
+}
+</style>
