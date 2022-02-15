@@ -1,19 +1,22 @@
 {
-	"pages": [
-		{
-			"path": "pages/app/index"
-		},
-		{
-			"path": "pages/chat/index"
-		},
-		{
-			"path": "pages/contact/index"
-		},
-		{
-			"path": "pages/index/index"
-		}
-	],
-	"globalStyle": {
-		"navigationStyle": "custom"
-	}
+  "pages": [
+    {
+      "path": "pages/index/index"
+    },
+    {
+      "path": "pages/app/index"
+    },
+    {
+      "path": "pages/chat/index"
+    },
+    {
+      "path": "pages/contact/index"
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "app-plus": {
+      "bounce": "none"
+    }
+  }
 }

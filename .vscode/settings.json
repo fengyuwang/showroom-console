@@ -1,12 +1,8 @@
 {
-  "stylelint.validate": [
-    "css",
-    "less",
-    "postcss",
-    "vue"
-  ],
+  "stylelint.validate": ["css", "less", "postcss", "vue"],
   "files.exclude": {},
   "i18n-ally.localesPaths": [
     "locales"
-  ]
+  ],
+  "editor.formatOnSave": true
 }
