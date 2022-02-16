@@ -34,8 +34,8 @@ export default {
     const _items = []
     for (let i = 0; i < 3; i++) {
       _items.push({
-        normalImage: `/public/images/roomSelect/room_option_${i}_normal.png`,
-        highlightImage: `/public/images/roomSelect/room_option_${i}_highlight.png`
+        normalImage: `/static/images/roomSelect/room_option_${i}_normal.png`,
+        highlightImage: `/static/images/roomSelect/room_option_${i}_highlight.png`
       })
     }
     this.items = _items
