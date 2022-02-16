@@ -9,7 +9,7 @@
       @touchcancel="touchcancel"
     >
       <image
-        class="w-420px h-120px"
+        class="w-423px h-113px"
         :src="index == currentIndex ? item.highlightImage : item.normalImage"
       />
     </view>
@@ -26,10 +26,10 @@ export default {
   },
   created() {
     const _items = []
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 6; i++) {
       _items.push({
-        normalImage: `/static/images/roomOne/room_0_menu_0.png`,
-        highlightImage: `/static/images/roomOne/room_0_menu_highlight_0.png`
+        normalImage: `/static/images/roomOne/${i}.png`,
+        highlightImage: `/static/images/roomOne/${i}_h.png`
       })
     }
     this.items = _items
