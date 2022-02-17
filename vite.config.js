@@ -1,31 +1,31 @@
 import { defineConfig } from 'vite'
 // import Vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
+// import Pages from 'vite-plugin-pages'
+// import Layouts from 'vite-plugin-vue-layouts'
+// import Components from 'unplugin-vue-components/vite'
+// import AutoImport from 'unplugin-auto-import/vite'
 import uni from '@dcloudio/vite-plugin-uni'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     // Vue(),
-    Pages(),
-    Layouts(),
-    Components({
-      dts: 'tmp/components.d.ts'
-    }),
-    AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'vue-i18n',
-        '@vueuse/head',
-        '@vueuse/core'
-      ],
-      dts: 'tmp/auto-imports.d.ts'
-    }),
+    // Pages(),
+    // Layouts(),
+    // Components({
+    //   dts: 'tmp/components.d.ts'
+    // }),
+    // AutoImport({
+    //   imports: [
+    //     'vue',
+    //     'vue-router',
+    //     'vue-i18n',
+    //     '@vueuse/head',
+    //     '@vueuse/core'
+    //   ],
+    //   dts: 'tmp/auto-imports.d.ts'
+    // }),
     WindiCSS(),
     uni.default()
   ],

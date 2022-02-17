@@ -31,7 +31,7 @@
       <view class="absolute right-122px bottom-122px" @click="clickTest">
         <image
           class="w-100px h-100px"
-          src="@/assets/images/control/control-center-play.png"
+          src="@/assets/images/control/control-center-play-disable.png"
         />
       </view>
     </view>

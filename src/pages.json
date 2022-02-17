@@ -4,13 +4,7 @@
       "path": "pages/index/index"
     },
     {
-      "path": "pages/app/index"
-    },
-    {
-      "path": "pages/chat/index"
-    },
-    {
-      "path": "pages/contact/index"
+      "path": "pages/room/index"
     }
   ],
   "globalStyle": {

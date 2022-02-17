@@ -1,16 +1,16 @@
 <template>
-  <RoomOneLayout>
-    <ControlStyleOneVue />
-  </RoomOneLayout>
+  <Layout>
+    <List />
+  </Layout>
 </template>
 
 <script>
-import ControlStyleOneVue from '@/components/compound/ControlStyleOne.vue'
-import RoomOneLayout from '@/layouts/roomOne.vue'
+import Layout from '@/layouts/Default.vue'
+import List from '@/components/rooms/List.vue'
 export default {
   components: {
-    ControlStyleOneVue,
-    RoomOneLayout
+    Layout,
+    List
   }
 }
 </script>

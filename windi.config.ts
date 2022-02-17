@@ -7,8 +7,14 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
-        teal: {
-          100: '#096'
+        primary: '#F84D00',
+        background: '#DFD7C1',
+        rooms: {
+          cell: {
+            from: '#FE446F',
+            to: '#F74302',
+            default: '#FB7032'
+          }
         }
       }
     }
