@@ -39,14 +39,18 @@ export default {
         title: '是否确认返回',
         content: '返回屏幕选择入口后，当前屏幕会回到初始状态。',
         showCancel: true,
-        success: () => {
-          const data = {
-            type: 'opt',
-            room_id: '1',
-            page_id: 0
+        success: function (res) {
+          if (res.confirm) {
+            const data = {
+              type: 'opt',
+              room_id: '1',
+              page_id: 0
+            }
+            send(JSON.stringify(data))
+            uni.navigateBack()
+          } else if (res.cancel) {
+            console.log('用户点击取消')
           }
-          send(JSON.stringify(data))
-          uni.navigateBack()
         }
       })
     }
