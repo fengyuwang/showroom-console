@@ -11,7 +11,7 @@ import Three from '@/components/rooms/one/contents/Three.vue'
 import Four from '@/components/rooms/one/contents/Four.vue'
 import Five from '@/components/rooms/one/contents/Five.vue'
 import Six from '@/components/rooms/one/contents/Six.vue'
-import Layout from '@/layouts/rooms/One.vue'
+import Layout from '@/layouts/rooms/one.vue'
 import Events, { emitter } from '@/events/index.js'
 import store from '@/store/index.js'
 export default {

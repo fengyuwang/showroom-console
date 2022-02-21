@@ -13,7 +13,7 @@
 
 <script>
 import Menu from '@/components/rooms/one/Menu.vue'
-import Scaffold from '@/components/layout/Scaffold.vue'
+import Scaffold from '@/components/Scaffold.vue'
 export default {
   components: {
     Menu,

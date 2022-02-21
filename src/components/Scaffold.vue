@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Header from '@/components/layout/Header.vue'
-import Aside from '@/components/layout/Aside.vue'
+import Header from '@/components/Header.vue'
+import Aside from '@/components/Aside.vue'
 
 export default {
   components: {

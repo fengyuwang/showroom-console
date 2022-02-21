@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Scaffold from '@/components/layout/Scaffold.vue'
+import Scaffold from '@/components/Scaffold.vue'
 export default {
   components: {
     Scaffold
