@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Control from '@/components/uikit/Control.vue'
+import Control from '@/components/foundation/Control.vue'
 export default {
   components: {
     Control
