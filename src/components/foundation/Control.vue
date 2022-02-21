@@ -30,6 +30,12 @@
       </view>
       <view class="absolute right-122px bottom-122px" @click="clickTest">
         <image
+          v-if="currentIndex == 4"
+          class="w-100px h-100px"
+          src="@/assets/images/control/control-center-play.png"
+        />
+        <image
+          v-else
           class="w-100px h-100px"
           src="@/assets/images/control/control-center-play-disable.png"
         />
@@ -40,21 +46,11 @@
 
 <script>
 import _ from 'lodash'
+import { send } from '@/socket/index.js'
 export default {
   data() {
     return {
       buttons: [
-        {
-          class: 'absolute left-70px top-152px w-40px h-40px',
-          backgroundClass:
-            'absolute top-106px left-8px w-190px h-134px transform rotate-270'
-        },
-        {
-          class:
-            'absolute right-70px top-152px w-40px h-40px transform rotate-180',
-          backgroundClass:
-            'absolute top-106px right-12px w-190px h-134px transform rotate-90'
-        },
         {
           class:
             'absolute left-152px top-70px w-40px h-40px transform rotate-90',
@@ -66,6 +62,17 @@ export default {
             'absolute right-152px top-238px w-40px h-40px transform rotate-270',
           backgroundClass:
             'absolute top-173px left-75px w-190px h-134px transform rotate-180'
+        },
+        {
+          class: 'absolute left-70px top-152px w-40px h-40px',
+          backgroundClass:
+            'absolute top-106px left-8px w-190px h-134px transform rotate-270'
+        },
+        {
+          class:
+            'absolute right-70px top-152px w-40px h-40px transform rotate-180',
+          backgroundClass:
+            'absolute top-106px right-12px w-190px h-134px transform rotate-90'
         }
       ],
       currentIndex: undefined
@@ -82,12 +89,26 @@ export default {
       const offsetY = touch.clientY - this._startTouch.clientY
       if (Math.max(Math.abs(offsetX), Math.abs(offsetY)) <= 20) return
       if (Math.abs(offsetX) < Math.abs(offsetY)) {
-        this.currentIndex = offsetY > 0 ? 3 : 2
+        this.currentIndex = offsetY > 0 ? 1 : 0
       } else {
-        this.currentIndex = offsetX > 0 ? 1 : 0
+        this.currentIndex = offsetX > 0 ? 3 : 2
       }
     },
     touchend() {
+      const data = {
+        type: 'opt',
+        room_id: '1',
+        page_id: 1,
+        operation_id: this.currentIndex ? this.currentIndex + 1 : 5
+      }
+      send(JSON.stringify(data))
+      if (this.currentIndex === undefined) {
+        this.currentIndex = 4
+        setTimeout(() => {
+          this.currentIndex = undefined
+        }, 100)
+        return
+      }
       this.currentIndex = undefined
     },
     touchcancel() {
