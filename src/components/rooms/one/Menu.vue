@@ -35,12 +35,6 @@ export default {
         tag: 1
       },
       {
-        title: '芒果超媒构成',
-        subtitle: 'MangoTV Media Constitute',
-        icon: '',
-        tag: 6
-      },
-      {
         title: '发展态势',
         subtitle: 'Development Trend',
         icon: '',
@@ -53,16 +47,22 @@ export default {
         tag: 3
       },
       {
+        title: '荣誉奖项',
+        subtitle: 'Honorary Award',
+        icon: '',
+        tag: 4
+      },
+      {
         title: '用户画像',
         subtitle: 'MangoTV User',
         icon: '',
         tag: 5
       },
       {
-        title: '荣誉奖项',
-        subtitle: 'Honorary Award',
+        title: '芒果超媒构成',
+        subtitle: 'MangoTV Media Constitute',
         icon: '',
-        tag: 4
+        tag: 6
       }
     ]
     this.items = _items
