@@ -29,14 +29,12 @@ export default {
     }
   },
   created() {
-    const start = 1949
-    let end = 2021
-    const _years = []
-    while (end >= start) {
-      _years.push(end)
-      end = end - 1
-    }
-    this.years = _years
+    const _years = [
+      1949, 1970, 1993, 1996, 1997, 1999, 2000, 2001, 2002, 2004, 2005, 2006,
+      2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
+      2019, 2020, 2021
+    ]
+    this.years = _years.reverse()
   },
   methods: {
     tap(year) {

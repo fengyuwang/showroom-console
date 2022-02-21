@@ -10,8 +10,8 @@
       class="w-344px h-344px"
       src="@/assets/images/control/control-background.png"
     />
-    <view class="absolute inset-0">
-      <view v-for="(button, index) in buttons" :key="index">
+    <div class="absolute inset-0">
+      <div v-for="(button, index) in buttons" :key="index">
         <template v-if="index == currentIndex">
           <image
             src="@/assets/images/control/control-arrow-background.png"
@@ -27,8 +27,8 @@
           src="@/assets/images/control/control-arrow-disable.png"
           :class="button.class"
         />
-      </view>
-      <view class="absolute right-122px bottom-122px" @click="clickTest">
+      </div>
+      <div class="absolute right-122px bottom-122px">
         <image
           v-if="currentIndex == 4"
           class="w-100px h-100px"
@@ -39,8 +39,8 @@
           class="w-100px h-100px"
           src="@/assets/images/control/control-center-play-disable.png"
         />
-      </view>
-    </view>
+      </div>
+    </div>
   </view>
 </template>
 
@@ -98,7 +98,7 @@ export default {
       const data = {
         type: 'opt',
         room_id: '1',
-        page_id: 1,
+        page_id: 6,
         operation_id: this.currentIndex ? this.currentIndex + 1 : 5
       }
       send(JSON.stringify(data))
