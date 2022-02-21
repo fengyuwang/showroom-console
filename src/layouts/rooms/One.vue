@@ -1,6 +1,12 @@
 <template>
   <div class="absolute flex inset-0 bg-black">
-    <Aside />
+    <Aside>
+      <image
+        src="@/assets/images/scaffold/aside-back.png"
+        class="w-20px h-34px mb-12 ml-12"
+        @tap="tap"
+      />
+    </Aside>
     <div class="relative flex flex-col flex-grow">
       <Header />
       <main class="relative flex flex-grow h-0">
@@ -19,12 +25,31 @@
 import Header from '@/components/Header.vue'
 import Aside from '@/components/Aside.vue'
 import Menu from '@/components/rooms/one/Menu.vue'
+import { send } from '@/socket/index.js'
 
 export default {
   components: {
     Menu,
     Header,
     Aside
+  },
+  methods: {
+    tap() {
+      uni.showModal({
+        title: '是否确认返回',
+        content: '返回屏幕选择入口后，当前屏幕会回到初始状态。',
+        showCancel: true,
+        success: () => {
+          const data = {
+            type: 'opt',
+            room_id: '1',
+            page_id: 0
+          }
+          send(JSON.stringify(data))
+          uni.navigateBack()
+        }
+      })
+    }
   }
 }
 </script>
