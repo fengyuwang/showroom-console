@@ -10,3 +10,5 @@ dist-ssr
 
 # 忽略hbuilderx
 /.hbuilderx
+unpackage
+uni_modules
