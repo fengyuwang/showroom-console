@@ -49,7 +49,7 @@ export default {
       this.currentIndex = index
       const data = {
         type: 'opt',
-        room_id: '1',
+        room_id: 1,
         page_id: 4,
         operation_id: 0,
         data: {
