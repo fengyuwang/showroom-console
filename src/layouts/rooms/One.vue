@@ -1,6 +1,15 @@
 <template>
   <div class="absolute flex inset-0 bg-black">
     <Aside>
+      <div class="flex flex-col ml-10">
+        <image
+          src="@/assets/images/control/control-play.png"
+          class="w-50px h-50px hover:bg-white hover:rounded-full"
+          @tap="play"
+        />
+        <span class="text-primary ml-1">宣传片</span>
+      </div>
+
       <image
         src="@/assets/images/scaffold/aside-back.png"
         class="w-20px h-34px mb-12 ml-12"
@@ -34,6 +43,14 @@ export default {
     Aside
   },
   methods: {
+    play() {
+      const data = {
+        type: 'opt',
+        room_id: store.state.roomId,
+        page_id: 1
+      }
+      send(JSON.stringify(data))
+    },
     tap() {
       uni.showModal({
         title: '是否确认返回',

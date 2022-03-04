@@ -1,10 +1,7 @@
 <template>
   <view
-    class="absolute w-2/5 top-4 bottom-10 flex flex-col justify-between bg-background rounded-xl border-primary border-4"
+    class="absolute w-2/5 top-4 bottom-10 flex flex-col justify-center bg-background rounded-xl border-primary border-4"
   >
-    <div class="flex flex-col mx-8 mt-8 z-10 text-primary text-xl">
-      <div>Honorary Award</div>
-    </div>
     <div class="flex flex-col">
       <view
         v-for="(row, index) in rows"
@@ -20,9 +17,6 @@
         {{ row }}
       </view>
     </div>
-    <div class="flex flex-col items-end mx-8 mb-8 z-10 text-primary text-3xl">
-      <div>荣誉奖项</div>
-    </div>
   </view>
 </template>
 
@@ -37,7 +31,8 @@ export default {
         '综合实力企业20强',
         '湖南省省长质量奖',
         '超媒文化企业30强',
-        '软件百强企业'
+        '软件百强企业',
+        '荣誉墙'
       ],
       currentIndex: undefined
     }
@@ -54,7 +49,7 @@ export default {
         page_id: store.state.currentItem.tag,
         operation_id: 0,
         data: {
-          tex: this.currentIndex + 1
+          tex: this.currentIndex
         }
       }
       send(JSON.stringify(data))
