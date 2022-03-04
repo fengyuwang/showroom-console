@@ -47,6 +47,7 @@
 <script>
 import _ from 'lodash'
 import { send } from '@/socket/index.js'
+import store from '@/store/index.js'
 export default {
   data() {
     return {
@@ -97,8 +98,8 @@ export default {
     touchend() {
       const data = {
         type: 'opt',
-        room_id: '1',
-        page_id: 6,
+        room_id: store.state.roomId,
+        page_id: store.state.currentItem.tag,
         operation_id: this.currentIndex ? this.currentIndex + 1 : 5
       }
       send(JSON.stringify(data))

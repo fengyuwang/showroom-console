@@ -28,6 +28,7 @@
 
 <script>
 import { send } from '@/socket/index.js'
+import store from '@/store/index.js'
 export default {
   data() {
     return {
@@ -49,8 +50,8 @@ export default {
       this.currentIndex = index
       const data = {
         type: 'opt',
-        room_id: 1,
-        page_id: 4,
+        room_id: store.state.roomId,
+        page_id: store.state.currentItem.tag,
         operation_id: 0,
         data: {
           tex: this.currentIndex + 1

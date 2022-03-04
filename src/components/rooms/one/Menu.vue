@@ -32,37 +32,37 @@ export default {
         title: '大事记',
         subtitle: 'Timeline',
         icon: '',
-        tag: 1
+        tag: 2
       },
       {
         title: '发展态势',
         subtitle: 'Development Trend',
         icon: '',
-        tag: 2
+        tag: 3
       },
       {
         title: '全球数据',
         subtitle: 'Global Data',
         icon: '',
-        tag: 3
+        tag: 4
       },
       {
         title: '荣誉奖项',
         subtitle: 'Honorary Award',
         icon: '',
-        tag: 4
+        tag: 5
       },
       {
         title: '用户画像',
         subtitle: 'MangoTV User',
         icon: '',
-        tag: 5
+        tag: 6
       },
       {
         title: '芒果超媒构成',
         subtitle: 'MangoTV Media Constitute',
         icon: '',
-        tag: 6
+        tag: 7
       }
     ]
     this.items = _items
@@ -74,10 +74,11 @@ export default {
       this.currentIndex = index
       emitter.emit(Events.Room.DidClickMenu, this.currentIndex)
       store.state.menuIndex = this.currentIndex
+      store.state.currentItem = this.items[index]
       const data = {
         type: 'opt',
-        room_id: '1',
-        page_id: this.items[index].tag,
+        room_id: store.state.roomId,
+        page_id: store.state.currentItem.tag,
         operation_id: 0
       }
       send(JSON.stringify(data))

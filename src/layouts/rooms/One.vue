@@ -26,7 +26,7 @@ import Header from '@/components/Header.vue'
 import Aside from '@/components/Aside.vue'
 import Menu from '@/components/rooms/one/Menu.vue'
 import { send } from '@/socket/index.js'
-
+import store from '@/store/index.js'
 export default {
   components: {
     Menu,
@@ -43,7 +43,7 @@ export default {
           if (res.confirm) {
             const data = {
               type: 'opt',
-              room_id: '1',
+              room_id: store.state.roomId,
               page_id: 0
             }
             send(JSON.stringify(data))
