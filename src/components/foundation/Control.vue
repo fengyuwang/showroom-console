@@ -1,44 +1,46 @@
 <template>
   <view
-    class="relative inline-block"
+    class="p-20"
     @touchstart="touchstart"
     @touchmove="touchmove"
     @touchend="touchend"
     @touchcancel="touchcancel"
   >
-    <image
-      class="w-344px h-344px"
-      src="@/assets/images/control/control-background.png"
-    />
-    <div class="absolute inset-0">
-      <div v-for="(button, index) in buttons" :key="index">
-        <template v-if="index == currentIndex">
+    <div class="relative inline-block">
+      <image
+        class="w-344px h-344px"
+        src="@/assets/images/control/control-background.png"
+      />
+      <div class="absolute inset-0">
+        <div v-for="(button, index) in buttons" :key="index">
+          <template v-if="index == currentIndex">
+            <image
+              src="@/assets/images/control/control-arrow-background.png"
+              :class="button.backgroundClass"
+            />
+            <image
+              src="@/assets/images/control/control-arrow.png"
+              :class="button.class"
+            />
+          </template>
           <image
-            src="@/assets/images/control/control-arrow-background.png"
-            :class="button.backgroundClass"
-          />
-          <image
-            src="@/assets/images/control/control-arrow.png"
+            v-else
+            src="@/assets/images/control/control-arrow-disable.png"
             :class="button.class"
           />
-        </template>
-        <image
-          v-else
-          src="@/assets/images/control/control-arrow-disable.png"
-          :class="button.class"
-        />
-      </div>
-      <div class="absolute right-122px bottom-122px">
-        <image
-          v-if="currentIndex == 4"
-          class="w-100px h-100px"
-          src="@/assets/images/control/control-center-play.png"
-        />
-        <image
-          v-else
-          class="w-100px h-100px"
-          src="@/assets/images/control/control-center-play-disable.png"
-        />
+        </div>
+        <div class="absolute right-122px bottom-122px">
+          <image
+            v-if="currentIndex == 4"
+            class="w-100px h-100px"
+            src="@/assets/images/control/control-center-play.png"
+          />
+          <image
+            v-else
+            class="w-100px h-100px"
+            src="@/assets/images/control/control-center-play-disable.png"
+          />
+        </div>
       </div>
     </div>
   </view>
