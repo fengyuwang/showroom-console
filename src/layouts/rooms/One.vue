@@ -13,7 +13,7 @@
       <image
         src="@/assets/images/scaffold/aside-back.png"
         class="w-20px h-34px mb-12 ml-12"
-        @tap="tap"
+        @tap="throttleTap"
       />
     </Aside>
     <div class="relative flex flex-col flex-grow">
@@ -36,7 +36,7 @@ import Aside from '@/components/Aside.vue'
 import Menu from '@/components/rooms/one/Menu.vue'
 import { send } from '@/socket/index.js'
 import store from '@/store/index.js'
-import debounce from 'lodash'
+import { throttle } from 'lodash'
 export default {
   components: {
     Menu,
@@ -52,7 +52,7 @@ export default {
       }
       send(JSON.stringify(data))
     },
-    tap: debounce(() => {
+    throttleTap: throttle(function () {
       uni.showModal({
         title: '是否确认返回',
         content: '返回屏幕选择入口后，当前屏幕会回到初始状态。',
