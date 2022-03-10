@@ -37,6 +37,7 @@ import Menu from '@/components/rooms/one/Menu.vue'
 import { send } from '@/socket/index.js'
 import store from '@/store/index.js'
 import { throttle } from 'lodash'
+import Events, { emitter } from '@/events/index.js'
 export default {
   components: {
     Menu,
@@ -51,6 +52,7 @@ export default {
         page_id: 1
       }
       send(JSON.stringify(data))
+      emitter.emit(Events.Room.Reset)
     },
     throttleTap: throttle(function () {
       uni.showModal({

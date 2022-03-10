@@ -26,6 +26,12 @@ export default {
       currentIndex: undefined
     }
   },
+  mounted() {
+    emitter.on(Events.Room.Reset, this.reset)
+  },
+  unmounted() {
+    emitter.off(Events.Room.Reset, this.reset)
+  },
   created() {
     const _items = [
       {
@@ -74,14 +80,21 @@ export default {
       this.currentIndex = index
       emitter.emit(Events.Room.DidClickMenu, this.currentIndex)
       store.state.menuIndex = this.currentIndex
-      store.state.currentItem = this.items[index]
-      const data = {
-        type: 'opt',
-        room_id: store.state.roomId,
-        page_id: store.state.currentItem.tag,
-        operation_id: 0
+      if (index > 0) {
+        store.state.currentItem = this.items[index]
+        const data = {
+          type: 'opt',
+          room_id: store.state.roomId,
+          page_id: store.state.currentItem.tag,
+          operation_id: 0
+        }
+        send(JSON.stringify(data))
+      } else {
+        store.state.currentItem = undefined
       }
-      send(JSON.stringify(data))
+    },
+    reset() {
+      this.tap(undefined)
     }
   }
 }
