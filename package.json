@@ -59,9 +59,9 @@
     "@vueuse/core": "^7.6.1",
     "@vueuse/head": "^0.7.5",
     "mitt": "^3.0.0",
+    "pinia": "^2.0.11",
     "vue": "^3.2.29",
-    "vue-i18n": "^9.1.9",
-    "vuex": "^4.0.2"
+    "vue-i18n": "^9.1.9"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.5.16",

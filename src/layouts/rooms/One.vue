@@ -36,6 +36,7 @@ import Aside from '@/components/Aside.vue'
 import Menu from '@/components/rooms/one/Menu.vue'
 import { send } from '@/socket/index.js'
 import store from '@/store/index.js'
+import debounce from 'lodash'
 export default {
   components: {
     Menu,
@@ -51,7 +52,7 @@ export default {
       }
       send(JSON.stringify(data))
     },
-    tap() {
+    tap: debounce(() => {
       uni.showModal({
         title: '是否确认返回',
         content: '返回屏幕选择入口后，当前屏幕会回到初始状态。',
@@ -70,7 +71,7 @@ export default {
           }
         }
       })
-    }
+    }, 500)
   }
 }
 </script>
