@@ -27,7 +27,7 @@ uni.onSocketClose(function (res) {
 })
 
 export function send(msg) {
-  console.log(isOpen)
+  console.log(msg)
   if (isOpen) {
     uni.sendSocketMessage({
       data: msg

@@ -1,4 +1,3 @@
-import { createPinia } from 'pinia'
-export default createPinia({
+export default {
   state: { roomId: 1, menuIndex: undefined, currentItem: undefined }
-})
+}
