@@ -80,7 +80,7 @@ export default {
       this.currentIndex = index
       emitter.emit(Events.Room.DidClickMenu, this.currentIndex)
       store.state.menuIndex = this.currentIndex
-      if (index > 0) {
+      if (index >= 0) {
         store.state.currentItem = this.items[index]
         const data = {
           type: 'opt',
