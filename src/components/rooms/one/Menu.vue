@@ -1,4 +1,11 @@
 <script>
+import Timeline from './contents/Timeline.vue'
+import DevelopmentTrend from './contents/DevelopmentTrend.vue'
+import GlobalData from './contents/GlobalData.vue'
+import HonoraryAward from './contents/HonoraryAward.vue'
+import MangoTVUser from './contents/MangoTVUser.vue'
+import MangoTVMediaConstitute from './contents/MangoTVMediaConstitute.vue'
+
 import Menu from '../Menu.vue'
 export default {
   extends: Menu,
@@ -10,42 +17,42 @@ export default {
           subtitle: 'Timeline',
           icon: '',
           tag: 2,
-          component: () => import('./contents/Timeline.vue')
+          component: Timeline
         },
         {
           title: '发展态势',
           subtitle: 'Development Trend',
           icon: '',
           tag: 3,
-          component: () => import('./contents/DevelopmentTrend.vue')
+          component: DevelopmentTrend
         },
         {
           title: '全球数据',
           subtitle: 'Global Data',
           icon: '',
           tag: 4,
-          component: () => import('./contents/GlobalData.vue')
+          component: GlobalData
         },
         {
           title: '荣誉奖项',
           subtitle: 'Honorary Award',
           icon: '',
           tag: 5,
-          component: () => import('./contents/HonoraryAward.vue')
+          component: HonoraryAward
         },
         {
           title: '用户画像',
           subtitle: 'MangoTV User',
           icon: '',
           tag: 6,
-          component: () => import('./contents/MangoTVUser.vue')
+          component: MangoTVUser
         },
         {
           title: '芒果超媒构成',
           subtitle: 'MangoTV Media Constitute',
           icon: '',
           tag: 7,
-          component: () => import('./contents/MangoTVMediaConstitute.vue')
+          component: MangoTVMediaConstitute
         }
       ]
     }

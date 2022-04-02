@@ -32,16 +32,10 @@ export default {
   unmounted() {
     emitter.off(Events.Room.Reset, this.reset)
   },
-  created() {
-    store.state.menuIndex = this.currentIndex
-  },
   methods: {
     tap(index) {
       if (index === this.currentIndex) return
       this.currentIndex = index
-      const item = this.items[index]
-      emitter.emit(Events.Room.DidClickMenu, item)
-      store.state.menuIndex = this.currentIndex
       if (index >= 0) {
         store.state.currentItem = this.items[index]
         const data = {
@@ -54,6 +48,7 @@ export default {
       } else {
         store.state.currentItem = undefined
       }
+      emitter.emit(Events.Room.DidClickMenu, store.state.currentItem)
     },
     reset() {
       this.tap(undefined)
