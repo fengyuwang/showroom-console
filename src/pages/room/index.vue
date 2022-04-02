@@ -1,45 +1,43 @@
 <template>
-  <Layout>
-    <component :is="items[index]" />
-  </Layout>
+  <component :is="layout" v-if="layout">
+    <component :is="component" v-if="component" />
+  </component>
 </template>
 
 <script>
-import One from '@/components/rooms/one/contents/One.vue'
-import Two from '@/components/rooms/one/contents/Two.vue'
-import Three from '@/components/rooms/one/contents/Three.vue'
-import Four from '@/components/rooms/one/contents/Four.vue'
-import Five from '@/components/rooms/one/contents/Five.vue'
-import Six from '@/components/rooms/one/contents/Six.vue'
-import Layout from '@/layouts/rooms/one.vue'
-import Events, { emitter } from '@/events/index.js'
 import store from '@/store/index.js'
+import Events, { emitter } from '@/events/index.js'
+import One from '@/layouts/rooms/one.vue'
+import Two from '@/layouts/rooms/two.vue'
 export default {
-  components: {
-    Layout,
-    One,
-    Two,
-    Three,
-    Four,
-    Five,
-    Six
-  },
   data() {
     return {
-      items: [One, Two, Three, Four, Five, Six],
-      index: undefined
+      layout: undefined,
+      component: undefined
+    }
+  },
+  async created() {
+    this.layout =
+      store.state.roomId === 1
+        ? One
+        : store.state.roomId === 2
+        ? Two
+        : undefined
+    if (this.layout === undefined) {
+      uni.navigateTo({
+        url: '/pages/index/index'
+      })
     }
   },
   mounted() {
-    this.index = store.state.menuIndex
     emitter.on(Events.Room.DidClickMenu, this.didClickMenu)
   },
   unmounted() {
     emitter.off(Events.Room.DidClickMenu, this.didClickMenu)
   },
   methods: {
-    didClickMenu(index) {
-      this.index = index
+    didClickMenu(item) {
+      this.component = item.component
     }
   }
 }

@@ -27,17 +27,17 @@ export default {
       {
         title: '一号厅',
         subtitle: 'Hall No.1',
-        tag: '1'
+        tag: 1
       },
       {
         title: '二号厅',
         subtitle: 'Hall No.2',
-        tag: '2'
+        tag: 2
       },
       {
         title: '三号厅',
         subtitle: 'Hall No.3',
-        tag: '3'
+        tag: 3
       }
     ]
     this.items = _items
