@@ -6,7 +6,7 @@ Tips:
 
 const namespace = 'Room/'
 
-const events = ['DidClickMenu', 'Reset']
+const events = ['DidClickMenu', 'Reset', 'DidClickAside']
 
 const result = {}
 events.forEach(event => {

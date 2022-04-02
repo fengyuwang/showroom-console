@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col p-4 absolute w-full">
     <view
-      v-for="(item, index) in items"
-      :key="index"
+      v-for="item in items"
+      :key="item.tag"
       class="flex flex-col my-2 items-center py-10 rounded-xl text-white normal hover:highlight"
-      @tap="tap"
+      @tap="tap(item)"
     >
       <div class="text-4xl">{{ item.title }}</div>
       <div class="mt-4">{{ item.subtitle }}</div>
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+/* eslint-disable no-undef */
+import store from '@/store/index.js'
 export default {
   data() {
     return {
@@ -24,21 +26,25 @@ export default {
     const _items = [
       {
         title: '一号厅',
-        subtitle: 'Hall No.1'
+        subtitle: 'Hall No.1',
+        tag: '1'
       },
       {
         title: '二号厅',
-        subtitle: 'Hall No.2'
+        subtitle: 'Hall No.2',
+        tag: '2'
       },
       {
         title: '三号厅',
-        subtitle: 'Hall No.3'
+        subtitle: 'Hall No.3',
+        tag: '3'
       }
     ]
     this.items = _items
   },
   methods: {
-    tap() {
+    tap(item) {
+      store.state.roomId = item.tag
       uni.navigateTo({
         url: '/pages/room/index'
       })
@@ -50,6 +56,7 @@ export default {
 .normal {
   @apply bg-rooms-cell-default;
 }
+
 .highlight {
   @apply bg-gradient-to-r from-rooms-cell-from to-rooms-cell-to;
 }
