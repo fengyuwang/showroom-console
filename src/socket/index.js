@@ -1,4 +1,5 @@
-let socket = undefined
+/* eslint-disable no-undef */
+let socket
 let isOpen = false
 
 connectSocket()
