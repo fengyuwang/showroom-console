@@ -10,7 +10,7 @@
     </Aside>
     <div class="relative flex flex-col flex-grow">
       <Header />
-      <main class="relative flex flex-grow h-0">
+      <main class="relative flex flex-grow min-h-0">
         <view class="w-1/2 overflow-y-auto">
           <component :is="slot.menu" v-if="slot.menu" />
         </view>
