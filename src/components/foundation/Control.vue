@@ -51,6 +51,12 @@ import _ from 'lodash'
 import { send } from '@/socket/index.js'
 import store from '@/store/index.js'
 export default {
+  props: {
+    payload: {
+      type: Object,
+      default: undefined
+    }
+  },
   data() {
     return {
       buttons: [
@@ -98,12 +104,13 @@ export default {
       }
     },
     touchend() {
-      const data = {
+      const data = Object.assign({}, this.payload, {
         type: 'opt',
         room_id: store.state.roomId,
         page_id: store.state.currentItem.tag,
-        operation_id: this.currentIndex ? this.currentIndex + 1 : 5
-      }
+        operation_id:
+          this.currentIndex !== undefined ? this.currentIndex + 1 : 5
+      })
       send(JSON.stringify(data))
       if (this.currentIndex === undefined) {
         this.currentIndex = 4
