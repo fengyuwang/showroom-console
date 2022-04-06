@@ -28,8 +28,6 @@ export default {
         url: '/pages/index/index'
       })
     }
-  },
-  mounted() {
     emitter.on(Events.Room.DidClickMenu, this.didClickMenu)
   },
   unmounted() {

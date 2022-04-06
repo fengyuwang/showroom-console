@@ -19,74 +19,77 @@ export default {
           title: '海量片库',
           subtitle: 'Opening',
           icon: '',
-          tag: 2,
+          tag: 0,
           component: Opening
         },
         {
           title: '平台运营',
           subtitle: 'Platform operation',
           icon: '',
-          tag: 3,
+          tag: 1,
           component: PlatformOperation
         },
         {
           title: '制作团队',
           subtitle: 'Teams introduction',
           icon: '',
-          tag: 4,
+          tag: 2,
           component: TeamsIntroduction
         },
         {
           title: '会员业务',
           subtitle: 'VIP Business',
           icon: '',
-          tag: 5,
+          tag: 3,
           component: VIPBusiness
         },
         {
           title: '影视集群',
           subtitle: 'Films & TV Collection',
           icon: '',
-          tag: 6,
+          tag: 4,
           component: FilmsTVCollection
         },
         {
           title: '大芒计划',
           subtitle: 'Damang Project',
           icon: '',
-          tag: 7,
+          tag: 5,
           component: DamangProject
         },
         {
           title: '小芒电商',
           subtitle: 'Mang shop',
           icon: '',
-          tag: 8,
+          tag: 6,
           component: MangShop
         },
         {
           title: '青芒计划',
           subtitle: 'Qingmang Plan',
           icon: '',
-          tag: 9,
+          tag: 7,
           component: QingmangPlan
         },
         {
           title: '实景娱乐',
           subtitle: 'M-City',
           icon: '',
-          tag: 10,
+          tag: 8,
           component: MCity
         },
         {
           title: '艺人',
           subtitle: 'Actors',
           icon: '',
-          tag: 11,
+          tag: 9,
           component: Actors
         }
       ]
     }
+  },
+  mounted() {
+    this.tap(0)
   }
 }
 </script>
