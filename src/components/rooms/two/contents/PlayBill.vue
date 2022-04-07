@@ -26,7 +26,15 @@ import store from '@/store/index.js'
 export default {
   data() {
     return {
-      rows: ['海报一', '海报二', '海报三', '海报四', '海报五', '海报六'],
+      rows: [
+        '海报一',
+        '海报二',
+        '海报三',
+        '海报四',
+        '海报五',
+        '海报六',
+        '海报七'
+      ],
       currentIndex: undefined
     }
   },
