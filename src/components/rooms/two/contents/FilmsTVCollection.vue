@@ -66,12 +66,16 @@ export default {
         type: 'opt',
         room_id: store.state.roomId,
         page_id: store.state.currentItem.tag,
-        flow: item.tag
+        data: {
+          flow: item.tag
+        }
       }
       send(JSON.stringify(data))
       this.tag = item.tag
       this.payload = {
-        flow: item.tag
+        data: {
+          flow: item.tag
+        }
       }
     }
   }

@@ -9,6 +9,7 @@ import MangShop from './contents/MangShop.vue'
 import QingmangPlan from './contents/QingmangPlan.vue'
 import MCity from './contents/MCity.vue'
 import Actors from './contents/Actors.vue'
+import PlayBill from './contents/PlayBill.vue'
 import Menu from '../Menu.vue'
 export default {
   extends: Menu,
@@ -84,6 +85,13 @@ export default {
           icon: '',
           tag: 9,
           component: Actors
+        },
+        {
+          title: '海报',
+          subtitle: 'PlayBill',
+          icon: '',
+          tag: 10,
+          component: PlayBill
         }
       ]
     }

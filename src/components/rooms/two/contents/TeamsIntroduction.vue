@@ -47,7 +47,9 @@ export default {
         type: 'opt',
         room_id: store.state.roomId,
         page_id: store.state.currentItem.tag,
-        pause: this.isPaused ? 1 : 0
+        data: {
+          pause: this.isPaused ? 1 : 0
+        }
       }
       send(JSON.stringify(data))
     }
