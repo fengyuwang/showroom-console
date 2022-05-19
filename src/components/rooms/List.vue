@@ -33,11 +33,6 @@ export default {
         title: '二号厅',
         subtitle: 'Hall No.2',
         tag: 2
-      },
-      {
-        title: '三号厅',
-        subtitle: 'Hall No.3',
-        tag: 3
       }
     ]
     this.items = _items

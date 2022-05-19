@@ -92,6 +92,41 @@ export default {
           icon: '',
           tag: 10,
           component: PlayBill
+        },
+        {
+          title: '智慧大屏',
+          subtitle: 'BigScreen',
+          icon: '',
+          tag: 11,
+          component: Opening
+        },
+        {
+          title: '湖南省业务数据',
+          subtitle: 'Hunan',
+          icon: '',
+          tag: 12,
+          component: Opening
+        },
+        {
+          title: '大电视',
+          subtitle: 'BigTV',
+          icon: '',
+          tag: 13,
+          component: Opening
+        },
+        {
+          title: '全国业务数据',
+          subtitle: 'Total',
+          icon: '',
+          tag: 14,
+          component: Opening
+        },
+        {
+          title: '聚宝盆',
+          subtitle: 'Cornucopia',
+          icon: '',
+          tag: 15,
+          component: Opening
         }
       ]
     }
