@@ -66,66 +66,73 @@ export default {
           component: MangShop
         },
         {
+          title: '海外文化传播',
+          subtitle: 'Oversea',
+          icon: '',
+          tag: 7,
+          component: Opening
+        },
+        {
           title: '青芒计划',
           subtitle: 'Qingmang Plan',
           icon: '',
-          tag: 7,
+          tag: 8,
           component: QingmangPlan
         },
         {
           title: '实景娱乐',
           subtitle: 'M-City',
           icon: '',
-          tag: 8,
+          tag: 9,
           component: MCity
         },
         {
           title: '艺人',
           subtitle: 'Actors',
           icon: '',
-          tag: 9,
+          tag: 10,
           component: Actors
         },
         {
           title: '海报',
           subtitle: 'PlayBill',
           icon: '',
-          tag: 10,
+          tag: 11,
           component: PlayBill
         },
         {
           title: '智慧大屏',
           subtitle: 'BigScreen',
           icon: '',
-          tag: 11,
+          tag: 12,
           component: Opening
         },
         {
           title: '湖南省业务数据',
           subtitle: 'Hunan',
           icon: '',
-          tag: 12,
+          tag: 13,
           component: Opening
         },
         {
           title: '大电视',
           subtitle: 'BigTV',
           icon: '',
-          tag: 13,
+          tag: 14,
           component: Opening
         },
         {
           title: '全国业务数据',
           subtitle: 'Total',
           icon: '',
-          tag: 14,
+          tag: 15,
           component: Opening
         },
         {
           title: '聚宝盆',
           subtitle: 'Cornucopia',
           icon: '',
-          tag: 15,
+          tag: 16,
           component: Opening
         }
       ]
