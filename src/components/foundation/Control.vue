@@ -104,13 +104,17 @@ export default {
       }
     },
     touchend() {
-      const data = Object.assign({}, this.payload, {
-        type: 'opt',
-        room_id: store.state.roomId,
-        page_id: store.state.currentItem.tag,
-        operation_id:
-          this.currentIndex !== undefined ? this.currentIndex + 1 : 5
-      })
+      const data = Object.assign(
+        {},
+        {
+          type: 'opt',
+          room_id: store.state.roomId,
+          page_id: store.state.currentItem.tag,
+          operation_id:
+            this.currentIndex !== undefined ? this.currentIndex + 1 : 5
+        },
+        this.payload
+      )
       send(JSON.stringify(data))
       if (this.currentIndex === undefined) {
         this.currentIndex = 4

@@ -10,6 +10,7 @@ import QingmangPlan from './contents/QingmangPlan.vue'
 import MCity from './contents/MCity.vue'
 import Actors from './contents/Actors.vue'
 import PlayBill from './contents/PlayBill.vue'
+import BigScreen from './contents/BigScreen.vue'
 import Menu from '../Menu.vue'
 export default {
   extends: Menu,
@@ -105,35 +106,7 @@ export default {
           subtitle: 'BigScreen',
           icon: '',
           tag: 12,
-          component: Opening
-        },
-        {
-          title: '湖南省业务数据',
-          subtitle: 'Hunan',
-          icon: '',
-          tag: 13,
-          component: Opening
-        },
-        {
-          title: '大电视',
-          subtitle: 'BigTV',
-          icon: '',
-          tag: 14,
-          component: Opening
-        },
-        {
-          title: '全国业务数据',
-          subtitle: 'Total',
-          icon: '',
-          tag: 15,
-          component: Opening
-        },
-        {
-          title: '聚宝盆',
-          subtitle: 'Cornucopia',
-          icon: '',
-          tag: 16,
-          component: Opening
+          component: BigScreen
         }
       ]
     }
