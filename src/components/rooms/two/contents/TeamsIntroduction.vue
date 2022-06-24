@@ -60,7 +60,7 @@ export default {
       items: [
         {
           title: '默认',
-          tag: undefined
+          tag: -1
         },
         {
           title: '节目团队',
@@ -95,12 +95,9 @@ export default {
         type: 'opt',
         room_id: store.state.roomId,
         page_id: store.state.currentItem.tag,
-        data:
-          item.tag !== undefined
-            ? {
-                team: item.tag
-              }
-            : undefined
+        data: {
+          team: item.tag
+        }
       }
       send(JSON.stringify(data))
       this.tag = item.tag
