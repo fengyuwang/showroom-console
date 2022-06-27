@@ -27,6 +27,7 @@
             v-else
             src="@/assets/images/control/control-arrow-disable.png"
             :class="button.class"
+            @click="onClick(index)"
           />
         </div>
         <div class="absolute right-122px bottom-122px">
@@ -39,6 +40,7 @@
             v-else
             class="w-100px h-100px"
             src="@/assets/images/control/control-center-play-disable.png"
+            @click="onClick(4)"
           />
         </div>
       </div>
@@ -104,6 +106,9 @@ export default {
       }
     },
     touchend() {
+      if (this.currentIndex === undefined) {
+        return
+      }
       const data = Object.assign(
         {},
         {
@@ -116,17 +121,16 @@ export default {
         this.payload
       )
       send(JSON.stringify(data))
-      if (this.currentIndex === undefined) {
-        this.currentIndex = 4
-        setTimeout(() => {
-          this.currentIndex = undefined
-        }, 100)
-        return
-      }
       this.currentIndex = undefined
     },
     touchcancel() {
       this.currentIndex = undefined
+    },
+    onClick(index) {
+      this.currentIndex = index
+      setTimeout(() => {
+        this.touchend()
+      }, 100)
     }
   }
 }
