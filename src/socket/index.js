@@ -18,7 +18,9 @@ uni.onSocketOpen(function (res) {
 uni.onSocketError(function (err) {
   console.log(err)
   isOpen = false
-  connectSocket()
+  setTimeout(() => {
+    connectSocket()
+  }, 200)
 })
 
 uni.onSocketClose(function (res) {
