@@ -6,7 +6,7 @@ connectSocket()
 
 function connectSocket() {
   socket = uni.connectSocket({
-    url: 'ws://172.31.57.121:3398'
+    url: 'ws://172.31.52.122:3398'
   })
 }
 
