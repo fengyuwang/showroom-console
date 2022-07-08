@@ -19,7 +19,7 @@
       class="relative flex-grow flex flex-col justify-center bg-background rounded-b-xl rounded-r-xl border-primary border-4"
     >
       <div class="flex justify-center item-center overflow-hidden">
-        <Control />
+        <Control :payload="payload" />
       </div>
     </view>
   </div>
