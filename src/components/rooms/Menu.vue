@@ -8,7 +8,7 @@
       @tap="tap(index)"
     >
       <div class="flex flex-col mx-8">
-        <div class="text-2xl">{{ item.title }}</div>
+        <div class="text-xl">{{ item.title }}</div>
         <div>{{ item.subtitle }}</div>
       </div>
     </view>

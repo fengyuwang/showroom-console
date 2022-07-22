@@ -6,7 +6,7 @@
       class="flex flex-col my-2 items-center py-10 rounded-xl text-white normal hover:highlight"
       @tap="tap(item)"
     >
-      <div class="text-4xl">{{ item.title }}</div>
+      <div class="text-2xl">{{ item.title }}</div>
       <div class="mt-4">{{ item.subtitle }}</div>
     </view>
   </div>

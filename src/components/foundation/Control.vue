@@ -1,6 +1,5 @@
 <template>
   <view
-    class="p-20"
     @touchstart="touchstart"
     @touchmove="touchmove"
     @touchend="touchend"

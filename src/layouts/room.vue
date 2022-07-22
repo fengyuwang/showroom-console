@@ -11,10 +11,10 @@
     <div class="relative flex flex-col flex-grow">
       <Header />
       <main class="relative flex flex-grow min-h-0">
-        <view class="w-1/2 overflow-y-auto">
+        <view class="w-2/5 overflow-y-auto">
           <component :is="slot.menu" v-if="slot.menu" />
         </view>
-        <view class="w-1/2 overflow-hidden flex items-center justify-center">
+        <view class="w-3/5 overflow-hidden flex items-center justify-center">
           <slot />
         </view>
       </main>

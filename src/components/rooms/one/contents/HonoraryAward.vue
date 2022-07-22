@@ -2,11 +2,11 @@
   <view
     class="absolute w-2/5 top-4 bottom-10 flex flex-col justify-center bg-background rounded-xl border-primary border-4"
   >
-    <div class="flex flex-col">
+    <div class="flex flex-col overflow-y-scroll">
       <view
         v-for="(row, index) in rows"
         :key="index"
-        class="flex justify-center align-center p-5 m-2 rounded-lg text-xl"
+        class="flex justify-center align-center p-5 m-2 rounded-lg"
         :class="
           currentIndex == index
             ? 'bg-primary text-white'

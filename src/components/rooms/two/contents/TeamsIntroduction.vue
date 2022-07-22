@@ -4,7 +4,7 @@
       <view
         v-for="item in items"
         :key="item.tag"
-        class="relative w-24 h-14 -mb-1 z-10 rounded-t-xl border-primary border-t-4 border-l-4 border-r-4 flex items-center justify-center"
+        class="text-xs relative w-18 h-10 -mb-1 z-10 rounded-t-xl border-primary border-t-4 border-l-4 border-r-4 flex items-center justify-center"
         :class="
           tag === item.tag
             ? ['bg-background', 'text-primary']
@@ -21,21 +21,23 @@
       <div class="flex justify-center item-center overflow-hidden">
         <Control />
       </div>
-      <div class="flex items-center justify-center">
+      <div
+        class="absolute bottom-0 left-0 right-0 h-48px flex items-center justify-center"
+      >
         <button
-          class="w-60px h-60px flex items-center justify-center"
+          class="w-40px h-40px flex items-center justify-center"
           @click="toggle"
         >
           <image
             v-if="isPaused"
             src="@/assets/images/scaffold/icon-play.png"
-            class="w-30px h-30px"
+            class="w-20px h-20px"
             alt=""
           />
           <image
             v-else
             src="@/assets/images/scaffold/icon-pause.png"
-            class="w-30px h-30px"
+            class="w-20px h-20px"
             alt=""
           />
         </button>

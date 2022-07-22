@@ -2,11 +2,11 @@
   <div
     class="absolute top-4 bottom-10 w-2/5 flex flex-col bg-background rounded-xl border-primary border-4"
   >
-    <div class="flex flex-col mx-8 mt-8 z-10 text-primary">
+    <div class="flex flex-col mx-8 mt-4 z-10 text-primary">
       <div class="text-xl">大事记</div>
       <div>Timeline</div>
     </div>
-    <div class="mx-8 mt-4 mb-10 overflow-scroll flex flex-wrap">
+    <div class="mx-4 mt-2 mb-4 overflow-scroll flex flex-wrap">
       <view
         v-for="year in years"
         :key="year"

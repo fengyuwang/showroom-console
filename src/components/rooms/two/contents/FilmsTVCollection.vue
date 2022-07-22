@@ -4,7 +4,7 @@
       <view
         v-for="item in items"
         :key="item.tag"
-        class="relative w-24 h-14 -mb-1 z-10 rounded-t-xl border-primary border-t-4 border-l-4 border-r-4 flex items-center justify-center"
+        class="text-xs relative w-18 h-10 -mb-1 z-10 rounded-t-xl border-primary border-t-4 border-l-4 border-r-4 flex items-center justify-center"
         :class="
           tag === item.tag
             ? ['bg-background', 'text-primary']
