@@ -18,11 +18,18 @@ export default {
     return {
       items: [
         {
-          title: '海量片库',
+          title: '内容片库',
           subtitle: 'Opening',
           icon: '',
           tag: 0,
           component: Opening
+        },
+        {
+          title: '内容团队',
+          subtitle: 'Teams introduction',
+          icon: '',
+          tag: 2,
+          component: TeamsIntroduction
         },
         {
           title: '平台运营',
@@ -32,32 +39,18 @@ export default {
           component: PlatformOperation
         },
         {
-          title: '制作团队',
-          subtitle: 'Teams introduction',
+          title: '海外传播',
+          subtitle: 'Oversea',
           icon: '',
-          tag: 2,
-          component: TeamsIntroduction
+          tag: 7,
+          component: Opening
         },
         {
-          title: '会员业务',
-          subtitle: 'VIP Business',
-          icon: '',
-          tag: 3,
-          component: VIPBusiness
-        },
-        {
-          title: '影视集群',
+          title: '影视剧',
           subtitle: 'Films & TV Collection',
           icon: '',
           tag: 4,
           component: FilmsTVCollection
-        },
-        {
-          title: '大芒计划',
-          subtitle: 'Damang Project',
-          icon: '',
-          tag: 5,
-          component: DamangProject
         },
         {
           title: '小芒电商',
@@ -67,11 +60,34 @@ export default {
           component: MangShop
         },
         {
-          title: '海外文化传播',
-          subtitle: 'Oversea',
+          title: '实景娱乐',
+          subtitle: 'M-City',
           icon: '',
-          tag: 7,
-          component: Opening
+          tag: 9,
+          component: MCity
+        },
+        {
+          title: '会员业务',
+          subtitle: 'VIP Business',
+          icon: '',
+          tag: 3,
+          component: VIPBusiness
+        },
+
+        {
+          title: '大芒计划',
+          subtitle: 'Damang Project',
+          icon: '',
+          tag: 5,
+          component: DamangProject
+        },
+
+        {
+          title: '智慧大屏',
+          subtitle: 'BigScreen',
+          icon: '',
+          tag: 12,
+          component: BigScreen
         },
         {
           title: '青芒计划',
@@ -80,13 +96,7 @@ export default {
           tag: 8,
           component: QingmangPlan
         },
-        {
-          title: '实景娱乐',
-          subtitle: 'M-City',
-          icon: '',
-          tag: 9,
-          component: MCity
-        },
+
         {
           title: '艺人',
           subtitle: 'Actors',
@@ -100,13 +110,6 @@ export default {
           icon: '',
           tag: 11,
           component: PlayBill
-        },
-        {
-          title: '智慧大屏',
-          subtitle: 'BigScreen',
-          icon: '',
-          tag: 12,
-          component: BigScreen
         }
       ]
     }
